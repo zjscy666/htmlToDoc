@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>html导出生成word文档</title>
+    <style>.word{color: blue}</style>
+    <!-- <link href="./index.css" rel="stylesheet" type="text/css" />  -->
+</head>
+
+<body>
+    <div id="word" class="word">
+        <h1 style="color:red">我只是个标题</h1>
+        <p style="font-size:20pt;font-weight:bold;">JS导出Word文档</p>
+        <div>内容</div>
+        <div id="chart" style="width:400px;height:400px;"></div>
+    </div>
+    <div style="display:none" id="content2">
+        <img src="" id="chart2" style="width:400px;height:400px;" />
+    </div>
+    <input type="button" value="导出word">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts-en.common.min.js"></script>
+    <script type="text/javascript" src="./line.js"></script>
+    <script type="text/javascript" src="./FileSaver.js"></script>
+    <script type="text/javascript" src="./htmlDocx.js"></script>
+    <script type="text/javascript" src="./toWord.js"></script>
+    <script>
+        $(function () {
+            $("input[type='button']").click(function (event) {
+                toWord('test')
+            });
+        })
+    </script>
+</body>
+
+</html>
